@@ -9,7 +9,7 @@ export function BackgroundOrb() {
       }}
       animate={{
         scale: [1, 1.4, 1],
-        opacity: [0.25, 0.35, 0.25],
+        opacity: [0.4, 0.5, 0.4],
       }}
       transition={{
         duration: 8,
