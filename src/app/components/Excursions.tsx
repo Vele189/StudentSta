@@ -35,7 +35,7 @@ export function Excursions() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">Curriculum Activities</h2>
+          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">Curriculum Activities</h2>
           <p className="text-lg text-gray-600 max-w-2xl">
             Beyond the classroom: hands-on learning experiences that connect theory with practice
           </p>
@@ -49,7 +49,7 @@ export function Excursions() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col h-full"
           >
-            <div className="p-8 bg-gray-50 rounded-xl mb-auto">
+            <div className="p-8 bg-[#D5D1B8] rounded-xl mb-auto">
               <h3 className="text-xl font-semibold mb-4">Why Curriculum Activities?</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Our curriculum-based activities extend learning beyond traditional tutoring. Students gain practical
@@ -92,7 +92,7 @@ export function Excursions() {
                   className="p-6 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-black text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#EFD926] text-black rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1">

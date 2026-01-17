@@ -18,6 +18,9 @@
   --accent-foreground: #FFFFFF;
   --destructive: #000000;
   --destructive-foreground: #FFFFFF;
+  --destructive-foreground: #FFFFFF;
+  --accent-yellow: #FACC15;
+  --accent-yellow-hover: #EAB308;
   --border: rgba(0, 0, 0, 0.1);
   --input: transparent;
   --input-background: #FFFFFF;

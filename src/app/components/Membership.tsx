@@ -39,7 +39,7 @@ export function Membership({ onJoinWaitlist }: MembershipProps) {
   ];
 
   return (
-    <section id="membership" ref={ref} className="py-24 bg-gray-50">
+    <section id="membership" ref={ref} className="py-24 bg-[#D5D1B8]">
       <div className="max-w-[1200px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export function Membership({ onJoinWaitlist }: MembershipProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">Membership Options</h2>
+          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">Membership Options</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the support level that works best for your academic goals
           </p>
@@ -61,8 +61,8 @@ export function Membership({ onJoinWaitlist }: MembershipProps) {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className={`p-8 rounded-xl ${tier.featured
-                  ? 'bg-black text-white shadow-2xl scale-105'
-                  : 'bg-white border border-gray-200'
+                ? 'bg-black text-white shadow-2xl scale-105'
+                : 'bg-white border border-gray-200'
                 }`}
             >
               <h3 className="text-2xl font-semibold mb-2">{tier.name}</h3>
@@ -90,8 +90,8 @@ export function Membership({ onJoinWaitlist }: MembershipProps) {
               <button
                 onClick={onJoinWaitlist}
                 className={`w-full py-3 rounded-lg font-medium transition-all duration-300 ${tier.featured
-                    ? 'bg-white text-black hover:bg-gray-100'
-                    : 'bg-black text-white hover:bg-gray-900'
+                  ? 'bg-white text-black hover:bg-gray-100'
+                  : 'bg-black text-white hover:bg-gray-900'
                   }`}
               >
                 {tier.cta}

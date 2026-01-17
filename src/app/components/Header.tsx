@@ -42,8 +42,8 @@ export function Header({ onEnquireClick }: HeaderProps) {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <img src="/logo.png" alt="StudentSta Logo" className="w-8 h-8 object-contain" />
-            <span className="text-xl font-semibold tracking-tight">StudentSta</span>
+            <img src="/logo.png" alt="StudentSta Logo" className="w-[60px] h-[60px] object-contain" />
+            <span className="font-['Sarina'] font-normal text-[16px] leading-[18px] tracking-[-0.02em] text-center">StudentSta</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -52,7 +52,7 @@ export function Header({ onEnquireClick }: HeaderProps) {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-sm hover:text-gray-600 transition-colors duration-300"
+                className="font-['Satoshi'] font-medium text-[18px] hover:text-[var(--accent-yellow)] transition-colors duration-300"
               >
                 {link.label}
               </button>

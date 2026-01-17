@@ -53,7 +53,7 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">Common Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">Common Questions</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Everything you need to know about our services
           </p>
@@ -90,7 +90,7 @@ export function FAQ() {
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-5 pl-[3.5rem] text-gray-600 leading-relaxed">
+                <div className="px-6 pb-5 pl-[3.5rem] text-[#46453A] leading-relaxed">
                   {faq.answer}
                 </div>
               </motion.div>

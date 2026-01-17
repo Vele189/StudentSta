@@ -153,7 +153,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">Our Programs</h2>
+          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">Our Programs</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Structured learning pathways designed for grades 8 through 12
           </p>
@@ -170,7 +170,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
                 return (
                   <motion.div
                     key={program.title}
-                    className="absolute top-0 left-0 w-full h-full bg-white border border-gray-200 rounded-2xl shadow-xl p-8 cursor-pointer flex flex-col"
+                    className="absolute top-0 left-0 w-full h-full bg-white border border-gray-200 rounded-2xl shadow-xl p-8 flex flex-col justify-between"
                     initial={false}
                     animate={style as any}
                     transition={isMobile ? { duration: 0.3 } : { type: "spring", stiffness: 300, damping: 30 }}
@@ -187,28 +187,31 @@ export function Programs({ onEnquire }: ProgramsProps) {
                     }}
                     onClick={() => setActiveIndex(index)}
                   >
-                    <div className="w-14 h-14 bg-black text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
-                      <Icon className="w-7 h-7" />
+                    <div>
+                      <div className="flex items-center gap-4 mb-8">
+                        <div className="w-14 h-14 bg-[#EFD926] text-black rounded-xl flex items-center justify-center shadow-md flex-shrink-0">
+                          <Icon className="w-7 h-7" />
+                        </div>
+                        <h3 className="text-xl font-bold">{program.title}</h3>
+                      </div>
+                      <p className="text-gray-600 mb-8 leading-relaxed text-lg">{program.description}</p>
+
+                      <ul className="space-y-4 mb-8">
+                        {program.features.map((feature) => (
+                          <li key={feature} className="text-sm text-gray-700 flex items-center font-medium">
+                            <span className="w-1.5 h-1.5 bg-black rounded-full mr-3 flex-shrink-0"></span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-
-                    <h3 className="text-2xl font-bold mb-4">{program.title}</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">{program.description}</p>
-
-                    <ul className="space-y-3 mb-8">
-                      {program.features.map((feature) => (
-                        <li key={feature} className="text-sm text-gray-700 flex items-center font-medium">
-                          <span className="w-1.5 h-1.5 bg-black rounded-full mr-3 flex-shrink-0"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
 
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
                         onEnquire();
                       }}
-                      className="w-full py-4 border-2 border-black text-black font-semibold rounded-xl hover:bg-black hover:text-white transition-all duration-300"
+                      className="w-full py-4 border-2 border-black text-black font-semibold rounded-xl hover:bg-black hover:text-white transition-all duration-300 mt-auto"
                     >
                       Learn More
                     </button>
@@ -223,7 +226,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
         <div className="flex justify-center items-center gap-8 mt-8">
           <button
             onClick={prevSlide}
-            className="hidden md:block p-4 rounded-full bg-gray-100 hover:bg-gray-200 text-black transition-colors"
+            className="hidden md:block p-4 rounded-full bg-gray-100 hover:bg-[#46443A] hover:text-white text-black transition-colors"
             aria-label="Previous Program"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -235,7 +238,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-black w-8' : 'bg-gray-300'
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-[#F0D826] w-8' : 'bg-gray-300'
                   }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -244,7 +247,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
 
           <button
             onClick={nextSlide}
-            className="hidden md:block p-4 rounded-full bg-gray-100 hover:bg-gray-200 text-black transition-colors"
+            className="hidden md:block p-4 rounded-full bg-gray-100 hover:bg-[#46443A] hover:text-white text-black transition-colors"
             aria-label="Next Program"
           >
             <ChevronRight className="w-6 h-6" />

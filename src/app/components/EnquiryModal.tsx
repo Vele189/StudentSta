@@ -10,43 +10,6 @@ interface EnquiryModalProps {
 }
 
 export function EnquiryModal({ isOpen, onClose, type }: EnquiryModalProps) {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    contact: '',
-    grade: '',
-    subject: '',
-    preferredDate: '',
-    location: '',
-    message: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Mock submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      onClose();
-      setFormData({
-        fullName: '',
-        contact: '',
-        grade: '',
-        subject: '',
-        preferredDate: '',
-        location: '',
-        message: '',
-      });
-    }, 2000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
     <Dialog.Root open={isOpen} onOpenChange={onClose}>
       <AnimatePresence>
@@ -67,161 +30,42 @@ export function EnquiryModal({ isOpen, onClose, type }: EnquiryModalProps) {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
-                className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto z-50"
+                className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-sm p-8 z-50 flex flex-col items-center"
               >
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-6">
-                    <Dialog.Title className="text-2xl font-semibold">
-                      {type === 'tutor' ? 'Book a Tutor' : 'General Enquiry'}
-                    </Dialog.Title>
-                    <Dialog.Close asChild>
-                      <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                        <X className="w-5 h-5" />
-                      </button>
-                    </Dialog.Close>
-                  </div>
+                <div className="absolute -top-12 right-0 md:-right-4">
+                  <Dialog.Close asChild>
+                    <button className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300 backdrop-blur-md">
+                      <X className="w-6 h-6" />
+                    </button>
+                  </Dialog.Close>
+                </div>
 
-                  {!isSubmitted ? (
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                      <div>
-                        <label htmlFor="fullName" className="block text-sm font-medium mb-1.5">
-                          Full Name *
-                        </label>
-                        <input
-                          type="text"
-                          id="fullName"
-                          name="fullName"
-                          required
-                          value={formData.fullName}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="contact" className="block text-sm font-medium mb-1.5">
-                          Email or Phone *
-                        </label>
-                        <input
-                          type="text"
-                          id="contact"
-                          name="contact"
-                          required
-                          value={formData.contact}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="grade" className="block text-sm font-medium mb-1.5">
-                          Grade *
-                        </label>
-                        <select
-                          id="grade"
-                          name="grade"
-                          required
-                          value={formData.grade}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-                        >
-                          <option value="">Select grade</option>
-                          <option value="8">Grade 8</option>
-                          <option value="9">Grade 9</option>
-                          <option value="10">Grade 10</option>
-                          <option value="11">Grade 11</option>
-                        </select>
-                      </div>
-
-                      <div>
-                        <label htmlFor="subject" className="block text-sm font-medium mb-1.5">
-                          Subject *
-                        </label>
-                        <select
-                          id="subject"
-                          name="subject"
-                          required
-                          value={formData.subject}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-                        >
-                          <option value="">Select subject</option>
-                          <option value="maths">Mathematics</option>
-                          <option value="physical-science">Physical Science</option>
-                          <option value="physics">Physics</option>
-                          <option value="chemistry">Chemistry</option>
-                        </select>
-                      </div>
-
-                      {type === 'tutor' && (
-                        <>
-                          <div>
-                            <label htmlFor="preferredDate" className="block text-sm font-medium mb-1.5">
-                              Preferred Date/Time
-                            </label>
-                            <input
-                              type="text"
-                              id="preferredDate"
-                              name="preferredDate"
-                              value={formData.preferredDate}
-                              onChange={handleChange}
-                              placeholder="e.g., Mon-Fri afternoons"
-                              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-                            />
-                          </div>
-
-                          <div>
-                            <label htmlFor="location" className="block text-sm font-medium mb-1.5">
-                              Preferred Location
-                            </label>
-                            <input
-                              type="text"
-                              id="location"
-                              name="location"
-                              value={formData.location}
-                              onChange={handleChange}
-                              placeholder="e.g., Sandton"
-                              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-                            />
-                          </div>
-                        </>
-                      )}
-
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium mb-1.5">
-                          Message
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          rows={4}
-                          value={formData.message}
-                          onChange={handleChange}
-                          placeholder="Tell us more about your needs..."
-                          className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black resize-none"
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="w-full py-3 bg-black text-white rounded-lg hover:bg-gray-900 transition-all duration-300 font-medium"
-                      >
-                        Submit Enquiry
-                      </button>
-                    </form>
-                  ) : (
-                    <div className="py-12 text-center">
-                      <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Thank You!</h3>
-                      <p className="text-gray-600">
-                        We've received your enquiry and will get back to you shortly.
-                      </p>
+                <div className="flex justify-center gap-8">
+                  <a
+                    href="https://wa.me/27785576068"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                    aria-label="Chat on WhatsApp"
+                  >
+                    <div className="w-20 h-20 bg-[#EFD926] text-black rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.374-5.03c0-5.429 4.417-9.846 9.851-9.846 2.631.002 5.105 1.026 6.964 2.887 1.859 1.861 2.88 4.335 2.879 6.967.001 5.429-4.416 9.845-9.85 9.845z" />
+                      </svg>
                     </div>
-                  )}
+                  </a>
+
+                  <a
+                    href="mailto:studentstainfo@gmail.com"
+                    className="group"
+                    aria-label="Send Email"
+                  >
+                    <div className="w-20 h-20 bg-[#EFD926] text-black rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </a>
                 </div>
               </motion.div>
             </Dialog.Content>

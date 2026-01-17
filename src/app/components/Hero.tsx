@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+
 import { BackgroundOrb } from './BackgroundOrb';
 
 interface HeroProps {
@@ -25,7 +25,7 @@ export function Hero({ onGetStarted }: HeroProps) {
           className="text-center"
         >
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight mb-6 leading-[1.1]"
+            className="font-['Satoshi'] font-medium text-5xl md:text-7xl lg:text-8xl tracking-tight mb-6 leading-[1.1] text-[#46443A]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -72,21 +72,30 @@ export function Hero({ onGetStarted }: HeroProps) {
           >
             Personalized support · Expert tutors · In-person learning
           </motion.p>
-        </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.button
-          onClick={scrollToPrograms}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{
-            opacity: { delay: 1, duration: 0.5 },
-            y: { repeat: Infinity, duration: 2, ease: 'easeInOut' },
-          }}
-        >
-          <ChevronDown className="w-6 h-6 text-gray-400" />
-        </motion.button>
+          <motion.button
+            onClick={scrollToPrograms}
+            className="mx-auto mt-12 flex flex-col items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: [0, 10, 0] }}
+            transition={{
+              opacity: { delay: 1, duration: 0.5 },
+              y: { repeat: Infinity, duration: 2, ease: 'easeInOut' },
+            }}
+          >
+            <div className="w-[30px] h-[50px] border-2 border-current rounded-full flex justify-center p-2">
+              <motion.div
+                className="w-1 h-3 bg-current rounded-full"
+                animate={{ y: [0, 12, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.5,
+                  ease: "easeInOut",
+                }}
+              />
+            </div>
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

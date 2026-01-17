@@ -38,7 +38,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">How It Works</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Getting started is simple. Three steps to academic success.
           </p>
@@ -59,7 +59,7 @@ export function HowItWorks() {
                 <div className="text-6xl font-semibold text-gray-100 mb-4">{step.number}</div>
 
                 {/* Icon */}
-                <div className="w-14 h-14 bg-black text-white rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-[#EFD926] text-black rounded-xl flex items-center justify-center mb-6">
                   <Icon className="w-7 h-7" />
                 </div>
 

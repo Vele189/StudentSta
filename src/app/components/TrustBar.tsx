@@ -30,7 +30,7 @@ export function TrustBar() {
         >
           {duplicatedItems.map((item, index) => (
             <div key={`${item}-${index}`} className="flex-shrink-0">
-              <p className="text-lg md:text-xl font-medium text-gray-800">{item}</p>
+              <p className="text-[18px] font-['Sarina'] text-gray-800">{item}</p>
             </div>
           ))}
         </motion.div>
