@@ -189,7 +189,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
                   >
                     <div>
                       <div className="flex items-center gap-4 mb-8">
-                        <div className="w-14 h-14 bg-[#EFD926] text-black rounded-xl flex items-center justify-center shadow-md flex-shrink-0">
+                        <div className="w-14 h-14 bg-[var(--accent-yellow)] text-black rounded-xl flex items-center justify-center shadow-md flex-shrink-0">
                           <Icon className="w-7 h-7" />
                         </div>
                         <h3 className="text-xl font-bold">{program.title}</h3>
@@ -238,7 +238,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-[#F0D826] w-8' : 'bg-gray-300'
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-[var(--accent-yellow)] w-8' : 'bg-gray-300'
                   }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />

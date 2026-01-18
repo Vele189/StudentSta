@@ -34,7 +34,7 @@ export function TutorMarketplace({ onBookTutor }: TutorMarketplaceProps) {
   ];
 
   return (
-    <section id="tutors" ref={ref} className="py-24 bg-[#D5D1B8]">
+    <section id="tutors" ref={ref} className="py-24 bg-gray-100">
       <div className="max-w-[1200px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

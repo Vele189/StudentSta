@@ -38,12 +38,12 @@ export function Header({ onEnquireClick }: HeaderProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${isScrolled || isMobileMenuOpen ? 'bg-white shadow-sm' : 'bg-transparent'
         }`}
     >
-      <div className="max-w-[1200px] mx-auto px-6 py-4">
+      <div className="w-full px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <img src="/logo.png" alt="StudentSta Logo" className="w-[60px] h-[60px] object-contain" />
-            <span className="font-['Sarina'] font-normal text-[16px] leading-[18px] tracking-[-0.02em] text-center">StudentSta</span>
+            <span className="font-['Sarina'] font-normal text-[16px] leading-[18px] tracking-[-0.02em]">StudentSta</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -52,7 +52,7 @@ export function Header({ onEnquireClick }: HeaderProps) {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="font-['Satoshi'] font-medium text-[18px] hover:text-[var(--accent-yellow)] transition-colors duration-300"
+                className="font-['Satoshi'] font-medium text-[18px] hover:text-[var(--accent-yellow-hover)] transition-colors duration-300"
               >
                 {link.label}
               </button>
@@ -62,7 +62,7 @@ export function Header({ onEnquireClick }: HeaderProps) {
           {/* CTA Button */}
           <button
             onClick={onEnquireClick}
-            className="hidden md:block px-6 py-2.5 bg-black text-white rounded-lg hover:bg-gray-900 transition-all duration-300 hover:shadow-lg"
+            className="hidden md:block px-6 py-2.5 bg-black text-white rounded-lg hover:bg-[var(--accent-yellow)] hover:text-black transition-all duration-300 hover:shadow-lg"
           >
             Get Started
           </button>

@@ -13,8 +13,8 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:studentstainfo@gmail.com" className="hover:text-black transition-colors">
-                  studentstainfo@gmail.com
+                <a href="mailto:tidimatso.molala@studensta.co.za" className="hover:text-black transition-colors">
+                  tidimatso.molala@studensta.co.za
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -46,7 +46,7 @@ export function Footer() {
                 href="https://wa.me/27785576068"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300"
+                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-black hover:text-[var(--accent-yellow)] transition-all duration-300"
                 aria-label="WhatsApp"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -55,7 +55,7 @@ export function Footer() {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300"
+                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-black hover:text-[var(--accent-yellow)] transition-all duration-300"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ export function Footer() {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300"
+                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-black hover:text-[var(--accent-yellow)] transition-all duration-300"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

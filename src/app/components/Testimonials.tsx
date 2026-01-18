@@ -52,7 +52,7 @@ export function Testimonials() {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section ref={ref} className="py-24 bg-[#D5D1B8] overflow-hidden">
+    <section ref={ref} className="py-24 bg-gray-100 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -27,7 +27,7 @@ export function Excursions() {
   ];
 
   return (
-    <section id="excursions" ref={ref} className="py-24 bg-white">
+    <section id="excursions" ref={ref} className="py-24 bg-gray-100">
       <div className="max-w-[1200px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export function Excursions() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col h-full"
           >
-            <div className="p-8 bg-[#D5D1B8] rounded-xl mb-auto">
+            <div className="p-8 bg-white rounded-xl mb-auto">
               <h3 className="text-xl font-semibold mb-4">Why Curriculum Activities?</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Our curriculum-based activities extend learning beyond traditional tutoring. Students gain practical
@@ -92,7 +92,7 @@ export function Excursions() {
                   className="p-6 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#EFD926] text-black rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[var(--accent-yellow)] text-black rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1">

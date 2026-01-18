@@ -52,13 +52,13 @@ export function Hero({ onGetStarted }: HeroProps) {
           >
             <button
               onClick={onGetStarted}
-              className="px-8 py-4 bg-black text-white rounded-lg hover:bg-gray-900 transition-all duration-300 hover:shadow-xl min-w-[180px]"
+              className="px-8 py-4 bg-black text-white rounded-lg hover:bg-[var(--accent-yellow)] hover:text-black transition-all duration-300 hover:shadow-xl min-w-[180px]"
             >
               Get Started
             </button>
             <button
               onClick={scrollToPrograms}
-              className="px-8 py-4 bg-white text-black border-2 border-black rounded-lg hover:bg-gray-50 transition-all duration-300 min-w-[180px]"
+              className="px-8 py-4 bg-white text-black border-2 border-black rounded-lg hover:bg-[var(--accent-yellow)] hover:border-[var(--accent-yellow)] transition-all duration-300 min-w-[180px]"
             >
               View Programs
             </button>

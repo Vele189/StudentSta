@@ -56,10 +56,10 @@ export function HowItWorks() {
                 className="relative"
               >
                 {/* Step Number */}
-                <div className="text-6xl font-semibold text-gray-100 mb-4">{step.number}</div>
+                <div className="text-6xl font-semibold text-black mb-4">{step.number}</div>
 
                 {/* Icon */}
-                <div className="w-14 h-14 bg-[#EFD926] text-black rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-[var(--accent-yellow)] text-black rounded-xl flex items-center justify-center mb-6">
                   <Icon className="w-7 h-7" />
                 </div>
 
