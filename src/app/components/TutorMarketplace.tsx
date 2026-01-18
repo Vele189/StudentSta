@@ -34,7 +34,7 @@ export function TutorMarketplace({ onBookTutor }: TutorMarketplaceProps) {
   ];
 
   return (
-    <section id="tutors" ref={ref} className="py-24 bg-gray-100">
+    <section id="tutors" ref={ref} className="py-24 bg-black">
       <div className="max-w-[1200px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,8 +42,8 @@ export function TutorMarketplace({ onBookTutor }: TutorMarketplaceProps) {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">Find Your Tutor</h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
+          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4 text-white">Find Your Tutor</h2>
+          <p className="text-lg text-gray-400 max-w-2xl">
             Connect with experienced tutors who match your learning style and schedule. All sessions are in-person for
             the best learning outcomes.
           </p>

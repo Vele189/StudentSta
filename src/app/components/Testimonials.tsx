@@ -52,7 +52,7 @@ export function Testimonials() {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section ref={ref} className="py-24 bg-gray-100 overflow-hidden">
+    <section ref={ref} className="py-24 bg-black overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,8 +60,8 @@ export function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">Student Success</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4 text-white">Student Success</h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Hear from students and parents about their experience
           </p>
         </motion.div>

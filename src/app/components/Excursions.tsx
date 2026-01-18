@@ -27,7 +27,7 @@ export function Excursions() {
   ];
 
   return (
-    <section id="excursions" ref={ref} className="py-24 bg-gray-100">
+    <section id="excursions" ref={ref} className="py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,32 +49,34 @@ export function Excursions() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col h-full"
           >
-            <div className="p-8 bg-white rounded-xl mb-auto">
-              <h3 className="text-xl font-semibold mb-4">Why Curriculum Activities?</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Our curriculum-based activities extend learning beyond traditional tutoring. Students gain practical
-                understanding of concepts through real-world applications and collaborative experiences that make
-                abstract theories click.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                All activities are carefully designed to align with the South African curriculum (CAPS), reinforcing
-                classroom learning while building critical thinking, problem-solving, and teamwork skills that are
-                essential for exam success.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                By taking science and maths out of the textbook and into the real world, we help students develop
-                a genuine passion for the subjects, leading to better engagement and improved academic results.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="p-4 border border-gray-200 rounded-lg">
-                <p className="text-2xl font-semibold mb-1">Monthly</p>
-                <p className="text-sm text-gray-600">Activity frequency</p>
+            <div className="p-8 bg-black text-white rounded-xl h-full flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Why Curriculum Activities?</h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Our curriculum-based activities extend learning beyond traditional tutoring. Students gain practical
+                  understanding of concepts through real-world applications and collaborative experiences that make
+                  abstract theories click.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  All activities are carefully designed to align with the South African curriculum (CAPS), reinforcing
+                  classroom learning while building critical thinking, problem-solving, and teamwork skills that are
+                  essential for exam success.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-8">
+                  By taking science and maths out of the textbook and into the real world, we help students develop
+                  a genuine passion for the subjects, leading to better engagement and improved academic results.
+                </p>
               </div>
-              <div className="p-4 border border-gray-200 rounded-lg">
-                <p className="text-2xl font-semibold mb-1">12-15</p>
-                <p className="text-sm text-gray-600">Students per group</p>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-white rounded-lg text-black">
+                  <p className="text-2xl font-semibold mb-1">Monthly</p>
+                  <p className="text-sm text-gray-600">Activity frequency</p>
+                </div>
+                <div className="p-4 bg-white rounded-lg text-black">
+                  <p className="text-2xl font-semibold mb-1">12-15</p>
+                  <p className="text-sm text-gray-600">Students per group</p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -89,16 +91,16 @@ export function Excursions() {
                   initial={{ opacity: 0, x: 30 }}
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="p-6 bg-white border border-gray-200 rounded-xl hover:shadow-md transition-all duration-300"
+                  className="p-6 bg-black border border-gray-800 rounded-xl hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-[var(--accent-yellow)] text-black rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg font-semibold mb-2">{activity.title}</h4>
-                      <p className="text-gray-600 text-sm mb-3 leading-relaxed">{activity.description}</p>
-                      <p className="text-xs text-gray-500">{activity.curriculum}</p>
+                      <h4 className="text-lg font-semibold mb-2 text-white">{activity.title}</h4>
+                      <p className="text-gray-300 text-sm mb-3 leading-relaxed">{activity.description}</p>
+                      <p className="text-xs text-gray-400">{activity.curriculum}</p>
                     </div>
                   </div>
                 </motion.div>

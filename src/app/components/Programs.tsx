@@ -189,7 +189,10 @@ export function Programs({ onEnquire }: ProgramsProps) {
                   >
                     <div>
                       <div className="flex items-center gap-4 mb-8">
-                        <div className="w-14 h-14 bg-[var(--accent-yellow)] text-black rounded-xl flex items-center justify-center shadow-md flex-shrink-0">
+                        <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-md flex-shrink-0 ${['Holiday Bootcamps', 'Matric Final Push'].includes(program.title)
+                          ? 'bg-[var(--accent-yellow)] text-black'
+                          : 'bg-black text-white'
+                          }`}>
                           <Icon className="w-7 h-7" />
                         </div>
                         <h3 className="text-xl font-bold">{program.title}</h3>

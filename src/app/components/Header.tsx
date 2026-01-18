@@ -43,7 +43,7 @@ export function Header({ onEnquireClick }: HeaderProps) {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <img src="/logo.png" alt="StudentSta Logo" className="w-[60px] h-[60px] object-contain" />
-            <span className="font-['Sarina'] font-normal text-[16px] leading-[18px] tracking-[-0.02em]">StudentSta</span>
+            <span className="font-['Satoshi'] font-bold text-[20px] leading-[18px] tracking-[-0.02em]">StudentSta</span>
           </a>
 
           {/* Desktop Navigation */}
