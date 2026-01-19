@@ -69,13 +69,13 @@ export function Excursions() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-white rounded-lg text-black">
+                <div className="p-4 bg-black border border-gray-800 rounded-lg text-white">
                   <p className="text-2xl font-semibold mb-1">Monthly</p>
-                  <p className="text-sm text-gray-600">Activity frequency</p>
+                  <p className="text-sm text-gray-400">Activity frequency</p>
                 </div>
-                <div className="p-4 bg-white rounded-lg text-black">
-                  <p className="text-2xl font-semibold mb-1">12-15</p>
-                  <p className="text-sm text-gray-600">Students per group</p>
+                <div className="p-4 bg-black border border-gray-800 rounded-lg text-white">
+                  <p className="text-2xl font-semibold mb-1">15-20</p>
+                  <p className="text-sm text-gray-400">Students per group</p>
                 </div>
               </div>
             </div>

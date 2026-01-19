@@ -31,9 +31,9 @@ export function Testimonials() {
     },
     {
       name: 'Michelle R.',
-      grade: 'Grade 12 Student',
+      grade: 'Grade 11 Student',
       quote:
-        'The Matric Final Push program saved me. The predictive papers were spot on and I felt so ready for my finals.',
+        'The Maths Mastery program saved me. The problem-solving techniques were spot on and I felt so ready for my exams.',
     },
     {
       name: 'Priya D.',

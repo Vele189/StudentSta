@@ -25,7 +25,7 @@ export function Footer() {
               </div>
               <div className="flex items-start gap-2 text-sm text-gray-600">
                 <MapPin className="w-4 h-4 mt-0.5" />
-                <span>Remote, South Africa</span>
+                <span>Pretoria, South Africa</span>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Service Areas</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>Remote (Nationwide)</li>
+              <li>Pretoria (In-person)</li>
             </ul>
           </div>
 

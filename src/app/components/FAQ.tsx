@@ -11,7 +11,7 @@ export function FAQ() {
     {
       question: 'Where are your tutoring sessions held?',
       answer:
-        'Our tutoring sessions are 100% remote and conducted online via platforms like Zoom, Microsoft Teams, or Google Meet. This allows us to support students nationwide from the comfort of their homes.',
+        'In person at the student’s home (tutor goes to them).',
     },
     {
       question: 'What are your pricing options?',
@@ -26,7 +26,7 @@ export function FAQ() {
     {
       question: 'How often are curriculum activities and excursions?',
       answer:
-        'Curriculum activities occur monthly and are included with Premium membership. Activities include science museum visits, lab workshops, and group study sessions. Standard members can join activities for an additional fee.',
+        'Quarterly (one event per school term). Standard: additional fee applies. Premium: no additional fee.',
     },
     {
       question: 'How does tutor booking work?',

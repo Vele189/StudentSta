@@ -23,14 +23,14 @@ export function Programs({ onEnquire }: ProgramsProps) {
   const programs = [
     {
       icon: BookOpen,
-      title: 'Grade 8–9 Support',
+      title: 'Grade 8–11 Support',
       description:
         'Build a strong foundation in mathematics and physical science with structured weekly sessions.',
       features: ['Weekly in-person sessions', 'Foundation building', 'Homework support'],
     },
     {
       icon: GraduationCap,
-      title: 'Grade 10–11 Exam Prep',
+      title: 'Exam Preparation',
       description:
         'Intensive exam preparation focused on mastering key concepts, exam techniques, and achieving top results.',
       features: ['Exam-focused curriculum', 'Past paper practice', 'Time management skills'],
@@ -44,10 +44,10 @@ export function Programs({ onEnquire }: ProgramsProps) {
     },
     {
       icon: Trophy,
-      title: 'Matric Final Push',
+      title: 'Maths Mastery',
       description:
-        'The ultimate preparation package for Grade 12s, ensuring you walk into your finals with absolute confidence.',
-      features: ['Advanced problem solving', 'Predictive papers', 'Stress management'],
+        'The ultimate preparation package ensuring you master core concepts with absolute confidence.',
+      features: ['Advanced problem solving', 'Deep concept mastery', 'Stress management'],
     },
     {
       icon: Calendar,
@@ -155,7 +155,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
         >
           <h2 className="text-4xl md:text-5xl font-['Satoshi'] font-semibold mb-4">Our Programs</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Structured learning pathways designed for grades 8 through 12
+            Structured learning pathways designed for grades 8 through 11
           </p>
         </motion.div>
 
@@ -170,7 +170,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
                 return (
                   <motion.div
                     key={program.title}
-                    className="absolute top-0 left-0 w-full h-full bg-white border border-gray-200 rounded-2xl shadow-xl p-8 flex flex-col justify-between"
+                    className="absolute top-0 left-0 w-full h-full bg-black border border-zinc-800 rounded-2xl shadow-xl p-8 flex flex-col justify-between"
                     initial={false}
                     animate={style as any}
                     transition={isMobile ? { duration: 0.3 } : { type: "spring", stiffness: 300, damping: 30 }}
@@ -189,20 +189,17 @@ export function Programs({ onEnquire }: ProgramsProps) {
                   >
                     <div>
                       <div className="flex items-center gap-4 mb-8">
-                        <div className={`w-14 h-14 rounded-xl flex items-center justify-center shadow-md flex-shrink-0 ${['Holiday Bootcamps', 'Matric Final Push'].includes(program.title)
-                          ? 'bg-[var(--accent-yellow)] text-black'
-                          : 'bg-black text-white'
-                          }`}>
+                        <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-md flex-shrink-0 bg-[var(--accent-yellow)] text-black">
                           <Icon className="w-7 h-7" />
                         </div>
                         <h3 className="text-xl font-bold">{program.title}</h3>
                       </div>
-                      <p className="text-gray-600 mb-8 leading-relaxed text-lg">{program.description}</p>
+                      <p className="text-gray-300 mb-8 leading-relaxed text-lg">{program.description}</p>
 
                       <ul className="space-y-4 mb-8">
                         {program.features.map((feature) => (
-                          <li key={feature} className="text-sm text-gray-700 flex items-center font-medium">
-                            <span className="w-1.5 h-1.5 bg-black rounded-full mr-3 flex-shrink-0"></span>
+                          <li key={feature} className="text-sm text-gray-300 flex items-center font-medium">
+                            <span className="w-1.5 h-1.5 bg-[var(--accent-yellow)] rounded-full mr-3 flex-shrink-0"></span>
                             {feature}
                           </li>
                         ))}
@@ -214,7 +211,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
                         e.stopPropagation();
                         onEnquire();
                       }}
-                      className="w-full py-4 border-2 border-black text-black font-semibold rounded-xl hover:bg-black hover:text-white transition-all duration-300 mt-auto"
+                      className="w-full py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-black transition-all duration-300 mt-auto"
                     >
                       Learn More
                     </button>
