@@ -13,8 +13,8 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:tidimatso.molala@studensta.co.za" className="hover:text-black transition-colors">
-                  tidimatso.molala@studensta.co.za
+                <a href="mailto:tidimatso.molala@stundensta.co.za" className="hover:text-black transition-colors">
+                  tidimatso.molala@stundensta.co.za
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-600">

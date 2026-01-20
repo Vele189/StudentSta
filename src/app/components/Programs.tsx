@@ -192,7 +192,7 @@ export function Programs({ onEnquire }: ProgramsProps) {
                         <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-md flex-shrink-0 bg-[var(--accent-yellow)] text-black">
                           <Icon className="w-7 h-7" />
                         </div>
-                        <h3 className="text-xl font-bold">{program.title}</h3>
+                        <h3 className="text-xl font-bold text-white">{program.title}</h3>
                       </div>
                       <p className="text-gray-300 mb-8 leading-relaxed text-lg">{program.description}</p>
 
